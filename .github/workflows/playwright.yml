@@ -1,10 +1,9 @@
-name: Run Playwright Script
+name: Hourly Playwright Script
 
 on:
-  push:
-    branches:
-      - main  # 触发条件：推送到 main 分支时运行
-  workflow_dispatch:  # 允许手动触发
+  schedule:
+    - cron: '0 * * * *'  # 每小时的第 0 分钟运行
+  workflow_dispatch:     # 允许手动触发
 
 jobs:
   run-playwright:
