@@ -28,7 +28,7 @@ def handle_page(page):
 
 def main():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)  # 若不需要GUI界面，可将headless设置为True
+        browser = p.chromium.launch(headless=True)  # 若不需要GUI界面，可将headless设置为True
         page = browser.new_page()
         try:
             handle_page(page)
