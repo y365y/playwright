@@ -1,4 +1,4 @@
-name: Hourly Playwright Script
+name: Playwright Script
 
 on:
   schedule:
