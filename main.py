@@ -4,6 +4,7 @@ from playwright.sync_api import sync_playwright
 def handle_page(page):
     # 从环境变量中获取Cookie信息
     cookie_value = os.getenv('ck')
+    url = os.getenv('url')
     if not cookie_value:
         raise ValueError("环境变量 'ck' 未设置，请确保已正确配置。")
 
@@ -19,7 +20,7 @@ def handle_page(page):
     page.context.add_cookies([cookie])
     
     # 访问目标网页
-    page.goto('https://modelscope.cn/studios/kong3407/bv')
+    page.goto(https://modelscope.cn/studios/kong3407/bv)
     print(f"网页标题: {page.title()}")
     
     # 抓取类名为.chinese_name_title的文字内容
