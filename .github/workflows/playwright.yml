@@ -2,7 +2,7 @@ name: Hourly Playwright Script
 
 on:
   schedule:
-    - cron: '0 * * * *'  # 每小时的第 0 分钟运行
+    - cron: '*/1 * * * *'  # 每小时的第 0 分钟运行
   workflow_dispatch:     # 允许手动触发
 
 jobs:
