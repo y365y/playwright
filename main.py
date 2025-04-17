@@ -22,16 +22,18 @@ def handle_page(page):
     # 访问目标网页
     page.goto(url)
     
-    body = page.query_selector('body')
-    if body:
-        print(body.text_content())
+    # body = page.query_selector('body')
+    # if body:
+    #     print(body.text_content())
         
     # print(f"网页标题: {page.title()}")
     
     # 抓取类名为.chinese_name_title的文字内容
-    # elements = page.query_selector_all('.acss-zddqpb, .chinese_name_title')
-    # for element in elements:
-    #     print(element.text_content())
+    # page.wait_for_selector('.acss-zddqpb, .chinese_name_title', timeout=5000)
+    page.wait_for_load_state("networkidle")
+    elements = page.query_selector_all('.acss-zddqpb, .chinese_name_title')
+    for element in elements:
+        print(element.text_content())
 
 def main():
     with sync_playwright() as p:
