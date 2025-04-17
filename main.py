@@ -4,8 +4,7 @@ from playwright.sync_api import sync_playwright
 def handle_page(page):
     # 从环境变量中获取Cookie信息
     cookie_value = os.getenv('ck')
-    url = os.getenv('url')
-    print(f"{url} {cookie_value}")
+    url = os.getenv('url')    
     if not cookie_value:
         raise ValueError("环境变量 'ck' 未设置，请确保已正确配置。")
 
