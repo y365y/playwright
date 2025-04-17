@@ -20,7 +20,7 @@ def handle_page(page):
     page.context.add_cookies([cookie])
     
     # 访问目标网页
-    page.goto(https://modelscope.cn/studios/kong3407/bv)
+    page.goto(url)
     print(f"网页标题: {page.title()}")
     
     # 抓取类名为.chinese_name_title的文字内容
