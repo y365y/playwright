@@ -24,7 +24,7 @@ def handle_page(page):
     print(f"网页标题: {page.title()}")
     
     # 抓取类名为.chinese_name_title的文字内容
-    elements = page.query_selector_all('.chinese_name_title')
+    elements = page.query_selector_all('.acss-zddqpb, .chinese_name_title')
     for element in elements:
         print(element.text_content())
 
