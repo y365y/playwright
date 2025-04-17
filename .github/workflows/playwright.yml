@@ -27,5 +27,6 @@ jobs:
       - name: Run Playwright script
         env:
           ck: ${{ secrets.CK }}  # 使用环境变量 CK（从 GitHub Secrets 中获取）
+          url: ${{ secrets.URL }}  
         run: |
           python main.py
