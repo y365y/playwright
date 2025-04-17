@@ -29,7 +29,7 @@ def handle_page(page):
     # print(f"网页标题: {page.title()}")
     
     # 抓取类名为.chinese_name_title的文字内容
-    # page.wait_for_selector('.acss-zddqpb, .chinese_name_title', timeout=5000)
+    # 等待动态内容加载完成
     page.wait_for_load_state("networkidle")
     elements = page.query_selector_all('.acss-zddqpb, .chinese_name_title')
     for element in elements:
