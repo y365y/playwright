@@ -2,7 +2,7 @@ name: Playwright Script
 
 on:
   schedule:
-    - cron: '0 * * * *'  # 每15分钟运行
+    - cron: '*/30 * * * *'  # 每30分钟运行
   workflow_dispatch:     # 允许手动触发
 
 jobs:
